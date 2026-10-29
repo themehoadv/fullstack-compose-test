@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "80"
+  
+  api:
+    image: traefik/whoami
+    ports:
+      - "80"
+
+  redis:
+    image: redis:alpine
